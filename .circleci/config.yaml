@@ -25,6 +25,9 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       - run:
+          name: build dependencies
+          command: gem install budler
+      - run:
           name: Which bundler?
           command: bundle -v
       - ruby/install-deps
